@@ -1,0 +1,174 @@
+/* General layout - WhatsApp Inspired Theme */
+body {
+    background-color: #f0f2f5; /* WhatsApp's light grey background */
+    color: #111b21; /* WhatsApp's primary dark text color */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Stability Fix: Add padding to the bottom */
+.stApp {
+    padding-bottom: 110px !important;
+}
+
+h1, h3 {
+    text-align: center;
+    color: #005c4b; /* A deep green for headers */
+    font-weight: 600; /* Bolder headers */
+}
+
+p {
+    text-align: center;
+    color: #3b4a54;
+}
+
+/* Header and logo */
+.header {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.logo-img {
+    width: 90px;
+    margin-bottom: -10px;
+}
+
+/* Chat container */
+.chat-container {
+    max-width: 750px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Welcome message */
+.welcome-container h3 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.welcome-container p {
+    font-size: 18px;
+    color: #667781;
+}
+
+/* Message bubbles */
+.chat-message {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.chat-message.user {
+    justify-content: flex-end;
+}
+
+.chat-message.bot {
+    justify-content: flex-start;
+}
+
+.bubble {
+    padding: 12px 18px;
+    border-radius: 18px; /* Slightly less rounded */
+    max-width: 80%;
+    font-size: 16px;
+    font-weight: 500; /* Thicker text */
+    line-height: 1.5;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.user-bubble {
+    background-color: #d9fdd3; /* WhatsApp's outgoing message green */
+    color: #0b141a;
+    border-top-right-radius: 4px; /* Distinctive shape */
+}
+
+.bot-bubble {
+    background-color: #ffffff; /* WhatsApp's incoming message white */
+    color: #111b21;
+    border-top-left-radius: 4px; /* Distinctive shape */
+}
+
+/* Inline Loading Spinner */
+.loading-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #00a884; /* WhatsApp Green */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Input section */
+.input-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f2f5; /* Match body background */
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"] {
+    height: 50px;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 25px; /* Pill-shaped input */
+    border: 1px solid #dde1e5;
+}
+
+.input-container .stButton button {
+    background-color: #00a884; /* WhatsApp Green */
+    color: white;
+    font-size: 24px;
+    height: 50px;
+    width: 50px; /* Make it a circle */
+    border-radius: 50%;
+    border: none;
+}
+
+.input-container .stButton button:hover {
+    background-color: #00876b;
+}
+
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    background-color: #ffffff !important;
+}
+
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] h1 {
+    color: #111b21 !important;
+}
+
+[data-testid="stSidebar"] .stButton button {
+    background-color: #f5f5f5;
+    color: #005c4b;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+}
+
+.disclaimer {
+    font-size: 14px;
+    color: #4a4a4a;
+    padding: 10px;
+    border-left: 4px solid #ffbc38; /* Warning Yellow */
+    background-color: #fff9e8;
+    border-radius: 4px;
+}
