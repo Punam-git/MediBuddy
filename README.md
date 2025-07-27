@@ -2,7 +2,6 @@
 
 A simple and friendly AI-powered health assistant built with Streamlit and Python. MediBuddy provides a clean chat interface for users to ask health-related questions.
 
-![MediBuddy Screenshot](https://i.imgur.com/uT9G2Qy.png)
 
 ---
 
