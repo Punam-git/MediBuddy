@@ -4,6 +4,7 @@
 MediBuddy is a real-time AI-powered health assistant built with **Streamlit** and **Python**. Designed like a modern messaging app, MediBuddy helps users ask health-related questions in a clean, friendly UI. 💬
 
 ---
+Streamlit link : https://medibuddy-aiassistant.streamlit.app/
 
 ## ✨ Features
 
