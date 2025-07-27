@@ -1,54 +1,101 @@
+
 # 🩺 MediBuddy - AI Health Assistant
 
-A simple and friendly AI-powered health assistant built with Streamlit and Python. MediBuddy provides a clean chat interface for users to ask health-related questions.
-
+MediBuddy is a real-time AI-powered health assistant built with **Streamlit** and **Python**. Designed like a modern messaging app, MediBuddy helps users ask health-related questions in a clean, friendly UI. 💬
 
 ---
 
 ## ✨ Features
 
-- **Clean Chat UI**: An intuitive interface styled to look like modern messaging apps.
-- **Real-time AI Responses**: Get instant, helpful answers to your questions.
-- **Stable User Experience**: The interface remains stable while the AI generates a response.
-- **Conversation Management**: Easily view and clear your chat history.
+- 💬 **Modern Chat UI**: Feels like chatting with a real assistant—user messages on the right, bot messages on the left.
+- ⚡ **Real-Time AI Responses**: Streamlined response rendering without page reloads.
+- 🧠 **Persistent Chat Memory**: Remembers conversation context for natural interaction.
+- 🎨 **Styled Controls**: Start/reset with a polished, clean UI.
+- ✅ **Keyboard & Button Support**: Send messages by hitting "Enter" or using the WhatsApp-style send button.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Streamlit
-- **Language**: Python
-- **AI Model**: `openrouter/qwen/qwen-2-7b-instruct:free` (A free model from OpenRouter)
-- **Styling**: Custom HTML & CSS
+- **Frontend**: Streamlit (with custom HTML & CSS)
+- **Backend**: Python
+- **AI Model**: `openrouter/qwen/qwen-2-7b-instruct:free`
+- **Environment Management**: `.env` file for secure API handling
 
 ---
 
-## 🚀 How to Run
+## 🚀 Getting Started
 
-1.  **Clone the project:**
-    ```bash
-    git clone <your-repository-url>
-    cd medibuddy-chatbot
-    ```
+### 1. Clone the Repository
 
-2.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+git clone https://github.com/your-username/medibuddy-chatbot.git
+cd medibuddy-chatbot
+```
 
-3.  **Run the app:**
-    ```bash
-    streamlit run app.py
-    ```
-    > **Note:** This project is configured to use a free model from OpenRouter that does not require an API key. You can run it immediately after installation.
+### 2. Set Up Environment Variables
+
+Create a `.env` file in the root directory and add your **OpenRouter API key**:
+
+```env
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+```
+
+> 🔐 You can get your free API key from [https://openrouter.ai](https://openrouter.ai)
+
+### 3. Install Dependencies
+
+Make sure you're using Python 3.8+.
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Application
+
+```bash
+streamlit run app.py
+```
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
-medibuddy-chatbot/│├── 📄 app.py├── 📄 backend.py├── 📄 config.py├── 📄 memory.py├── 📄 requirements.txt│├── 📁 aibot/├── 📁 assets/│   └── 🖼️ logo.png└── 📁 styles/└── 📄 styles.css
+```
+medibuddy-chatbot/
+├── .env                     # Your OpenRouter API key (not committed)
+├── app.py                  # Main Streamlit frontend
+├── backend.py              # Handles interaction with OpenRouter API
+├── config.py               # Chat settings and system prompt
+├── memory.py               # Handles message context (memory)
+├── requirements.txt        # Required Python packages
+├── assets/
+│   └── logo.png            # App logo
+├── styles/
+│   └── styles.css          # Custom styling for chatbot UI
+└── README.md               # You're here!
+```
+
+---
+
+## 📌 Notes
+
+- 💡 **No Login Required**: Works directly with a free OpenRouter model.
+- 🚫 **No Database Setup**: All memory is handled in-memory using `streamlit.session_state`.
+- 🧼 **Reset Button**: Clears chat context to start a new conversation.
+
 ---
 
 ## ⚠️ Medical Disclaimer
 
-This AI is for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a licensed physician for any health concerns.
+This chatbot is for **informational purposes only** and does **not** replace professional medical consultation. Always seek the advice of a licensed physician or qualified health provider regarding medical conditions.
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first.
+
+---
+
+
